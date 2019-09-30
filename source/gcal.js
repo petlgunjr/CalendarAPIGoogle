@@ -1,7 +1,7 @@
 import request from 'superagent'
 
-const CALENDAR_ID = CALENDAR_PROJECT_ID;
-const API_KEY = CALENDAR_PROJECT_KEY;
+const CALENDAR_ID = process.env.CALENDARAPIGOOGLEID;
+const API_KEY = process.env.GOOGLECALENDARAPI;
 let url = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`
 
 export function getEvents (callback) {
